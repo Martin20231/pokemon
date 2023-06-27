@@ -1,0 +1,7 @@
+.container
+  - for (let i = 1; i <= 20; i++)
+    .box
+      a(href=`pokedex.html?id=${i}`)
+        img(src=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${String(i).padStart(3, '0')}.png`, alt=`Pokémon ${String(i).padStart(3, '0')}`)
+        p #{String(i).padStart(3, '0')}
+        p Pokémon #{String(i).padStart(3, '0')}
