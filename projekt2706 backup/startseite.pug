@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Startseite
+    link(rel='stylesheet', type='text/css', href='styles.css')
+  body
+    audio#pokemon-music(src='pokemon_music.mp3', loop, autoplay)
+
+    nav
+      ul.center
+        li
+          a(href='#') Startseite
+        li
+          a(href='#') Pokedex
+
+    // Weitere Inhalte der Startseite
+
+    script.
+      // Funktion zum Abspielen und Anhalten der Pokémon-Musik
+      function playPokemonMusic() {
+        const audio = document.getElementById('pokemon-music');
+        audio.play();
+      }
+
+      function pausePokemonMusic() {
+        const audio = document.getElementById('pokemon-music');
+        audio.pause();
+      }
+
+      // Aufruf der Funktion beim Laden der Seite
+      window.onload = playPokemonMusic
